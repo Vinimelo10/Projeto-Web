@@ -1,14 +1,41 @@
 'use client'
-import { Link } from 'next/link';
-import MainNossoTrabalho from "./Components/MainNossoTrabalho";
-import Home from "./Components/Páginas/Home";
-import { BrowserRouter as Router } from 'react-router-dom';
-import NossoTrabalho from "./Components/Páginas/nosso-trabalho";
+import { useState } from 'react';
+import Menu from './Components/Menu';
+import Footer from '@/app/Components/Footer';
+import Link from 'next/link';
 
-export default function Page() {
+export default function Home() {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <Router>
-    <Home />
-    </Router>
+    <>
+    <header>
+        <img src="../Imagens/logo.png" className='logo'/>
+        <Menu />
+    </header>
+    <main>
+        <div>
+            <img src="../Imagens/ImagemHome.jpg" className="imagemHome"/>
+        </div>
+        <div>
+            <h1 className="nossaEmpresa">Nossa Empresa</h1>
+        </div>
+        <div className="divNossaEmpresa">
+        <div>
+            <p className="paragrafoNossaEmpresa">Nossa empresa está comprometida em garantir um futuro sem produtos químicos tóxicos, promovendo a saúde de pessoas e do planeta. Nosso objetivo é identificar e substituir produtos químicos nocivos por alternativas mais seguras em diferentes setores, como tecnologia, indústria, agricultura e consumo.</p>
+        </div>
+        <div>
+            <p className="paragrafoNossaEmpresa">A EcoTech Solutions utiliza uma ferramenta chamada GreenScreen for Safer Chemicals, para avaliar e comparar a segurança de diferentes substâncias químicas. Isso nos permite escolher materiais e processos de produção que minimizem a exposição a produtos químicos perigosos.</p>
+        </div>
+        </div>
+        <br /><br /><br /><br />
+        </main>
+        <br /><br /><br /><br />
+        <div className="imagemLixo">
+            <Link href="/solucao"><h1>DE QUE MANEIRA NÓS BRASILEIROS <br />PODEMOS ALCANÇAR NOSSOS OBJETIVOS?</h1></Link>
+            <Link href="/solucao"><img src="./Imagens/bandeiraBrasil.jpg" className="imagemBrasil" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} style={{width: isHovered ? '250px' : '200px', transition: 'width 0.5s ease'}}/></Link>
+        </div>
+        <br />
+        <Footer />
+    </>
   );
 }

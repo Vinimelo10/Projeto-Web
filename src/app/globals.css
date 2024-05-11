@@ -1,8 +1,8 @@
 body {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #f6f6f6;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -53,13 +53,7 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.icones{
+.icones {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,19 +62,12 @@ body {
   margin-bottom: 30px;
 }
 
-.NossosTrabalhos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
 .pIcons {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
@@ -93,18 +80,21 @@ nav {
   height: 130px;
 }
 
-nav ul {
-  list-style: none;
-  text-align: center;
-  margin-top: -80px;
-  float: right;
-  margin-right: 50px;
-  font-weight: bold;
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
-nav ul li {
-  display: inline-block;
-  position: relative;
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15%;
 }
 
 nav ul li a {
@@ -119,17 +109,12 @@ nav ul ul {
   position: absolute;
   left: 0;
   transition: 0.5s;
-  background-color:white;
+  background-color: white;
   width: 200px;
 }
 
-nav ul ul li {
-  display: block;
-}
-
-nav ul li:hover > ul {
-  display: block;
-  transition: 0.5s;
+nav ul li a:hover {
+  color: #6fa767;
 }
 
 .imagemHome {
@@ -140,22 +125,21 @@ nav ul li:hover > ul {
   font-weight: bold;
   font-size: 40px;
   text-align: center;
-  justify-content: center;
   padding: 40px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .divNossaEmpresa {
-  margin-left: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
 }
 
 .paragrafoNossaEmpresa {
   padding: 20px;
+  width: 50%;
+  margin-left: 22%;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -166,26 +150,23 @@ nav ul li:hover > ul {
 .divApi {
   background-color: black;
   color: white;
-  width: 50%;
   height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 320px;
+  margin-left: 25%;
+  width: 50%;
 }
 
 .cardTemas {
-  width: 50%;
   height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color:black;
+  color: black;
   font-weight: bold;
   background-color: #6fa767;
-  background-size: 200px;
-  background-repeat: no-repeat;
 }
 
 .card1 {
@@ -198,10 +179,9 @@ nav ul li:hover > ul {
 }
 
 .imagemLixo {
-  background-image: url('./Components/Imagens/imagemLixo.jpg');
-  background-size: 100%;
+  background-image: url('../Imagens/imagemLixo.jpg');
+  background-size: cover;
   width: 100%;
-  text-align: center;
   height: 750px;
   display: flex;
   justify-content: center;
@@ -213,10 +193,12 @@ nav ul li:hover > ul {
 .imagemLixo h1 {
   color: white;
   font-size: 70px;
+  align-items: center;
+  text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.imagemLixo h1:hover{
+.imagemLixo h1:hover {
   color: yellow;
   transition: 1s;
 }
@@ -224,7 +206,6 @@ nav ul li:hover > ul {
 .imagemBrasil {
   width: 300px;
   border-radius: 10px;
-  display: inline-block;
 }
 
 .monitoramento {
@@ -238,4 +219,161 @@ footer {
   height: 200px;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  justify-content: center;
+  padding: 0;
+  margin: 40px;
+}
 
+.card-container {
+  width: calc(50% - 20px);
+  max-width: 400px;
+  margin: 10px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-middle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-face {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 20px;
+  background-image: url('/src/Imagens/FundoCard.jpg');
+  background-size: 200px;
+  border: solid;
+  border-color: #6fa767;
+  font-weight: bold;
+  color: #6fa767;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  cursor: pointer;
+}
+.card-back {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 20px;
+  background-image: url('/src/Imagens/FundoCard.jpg');
+  background-size: 200px;
+  border: solid;
+  border-color: #6fa767;
+  font-weight: bold;
+  color: #6fa767;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  cursor: pointer;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-image {
+  width: 100px;
+}
+
+.card-top {
+  display: flex;
+}
+
+.card-back {
+  font-size: 18px;
+}
+
+.nome {
+  margin: 20px;
+}
+
+.virar {
+  color: #6fa767;
+  text-decoration: underline;
+}
+
+.h1NT {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  width: 95%;
+  justify-content: center;
+}
+
+.descricao {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  margin-bottom: -100%;
+}
+
+.descricao2 {
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 0px;
+}
+
+.servico {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+@media only screen and (max-width: 768px) {
+  .divLogo {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .logo {
+    margin-left: 0;
+  }
+  
+  .divFooter {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .divP {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .logoFooter {
+    align-items: center;
+    margin-left: 100px;
+  }
+  
+  .imagemLixo h1 {
+    font-size: 40px;
+    width: 100%;
+  }
+
+  .card-container {
+    width: 100%;
+    max-width: none; 
+    margin: 10px 0;
+  }
+
+  .divApi {
+    width: 100%;
+    max-width: none;
+    margin: 10px 0;
+  }
+}

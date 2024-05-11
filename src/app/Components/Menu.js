@@ -1,18 +1,14 @@
-'use client'
-import { Link } from "react-router-dom";
+import Link  from "next/link";
 
-export default function Cabecalho() {
+export default function Menu() {
     return (
         <>
         <nav>
             <div>
-                <img src="../Imagens/Logo.png" className="logo"/>
-            </div>
-            <div>
             <ul>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/nosso-trabalho">Nosso Trabalho</Link></li>
-            <li><Link href="/contato">Contato</Link></li>
+            <li><Link href="/solucao">Solução</Link></li>
             </ul>
             </div>
         </nav>

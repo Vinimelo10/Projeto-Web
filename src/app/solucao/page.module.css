@@ -1,0 +1,9 @@
+.pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 740px;
+    width: 200px;
+    text-align: center;
+    height: 30px;
+  }

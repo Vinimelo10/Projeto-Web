@@ -1,0 +1,18 @@
+.divAPI {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.divAQI {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.erro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

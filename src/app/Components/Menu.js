@@ -1,9 +1,9 @@
 import Link  from "next/link";
+import styles from "./menu.module.css";
 
 export default function Menu() {
     return (
-        <>
-        <nav>
+        <nav className={styles.nav}>
             <div>
             <ul>
             <li><Link href="/">Home</Link></li>
@@ -12,6 +12,5 @@ export default function Menu() {
             </ul>
             </div>
         </nav>
-        </>
     );
 }

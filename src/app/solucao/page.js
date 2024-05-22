@@ -1,16 +1,15 @@
 'use client'
-import React, { useState } from 'react';
-import Cabecalho from "../Components/Menu";
+import React, { useState, useEffect } from 'react';
 import Footer from "../Components/Footer";
 import Menu from "../Components/Menu";
 import Poluicao from "../Components/Poluicao";
 import styles from "./page.module.css";
 
 export default function Solucao() {
-    const [city, setCity] = useState(''); // Estado para a cidade
+    const [cidades, setCidades] = useState('');
 
     const handleInputChange = (event) => {
-        setCity(event.target.value); // Atualiza o estado com o valor do input
+        setCidades(event.target.value);
     };
 
     return (
@@ -19,19 +18,14 @@ export default function Solucao() {
             <img src="../Imagens/logo.png" className='logo'/>
             <Menu />
         </header>
-        <form onSubmit={e => e.preventDefault()}> {/* Previne o comportamento padrão de submit */}
+        <h1 className={styles.formAPI}>Informe o Nome da Cidade</h1>
+        <form onSubmit={e => e.preventDefault()} className={styles.pesquisa}> {}
             <input type="text" 
-                   placeholder="Pesquise a cidade desejada" 
-                   className={styles.pesquisa}
-                   value={city}
+                   value={cidades}
                    onChange={handleInputChange} />
         </form>
-        <Poluicao city={city} /> {/* Passa a cidade como prop */}
-        <br/><br/><br/>
-        <div className="divApi">
-            <p>Espaço Reservado para API</p>
-        </div>
-        <br/><br/><br/>
+        <Poluicao cidades={cidades} /> {}
+        <br/><br/><br/><br/><br/><br/>
         <Footer />
         </>
     );
